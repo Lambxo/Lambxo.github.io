@@ -1,0 +1,200 @@
+.works-page { display: flex; flex-direction: column; min-height: 100vh; }
+.works-main { flex: 1; display: flex; flex-direction: column; }
+
+/* Header */
+.works-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 32px 40px;
+  border-bottom: 4px solid #000;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.works-index-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.works-red-sq {
+  width: 10px;
+  height: 10px;
+  background: #FF3000;
+  display: inline-block;
+}
+.works-title { color: #000; margin-bottom: 8px; }
+.works-subtitle { max-width: 500px; }
+
+.works-system-tag {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 2px solid #000;
+  flex-shrink: 0;
+}
+.works-system-tag > div:first-child { padding: 12px 16px; }
+.works-ix-badge {
+  width: 48px;
+  height: 48px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+/* Bento grid */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 4px solid #000;
+}
+
+.works-cell {
+  border: 2px solid #000;
+  border-top: none;
+  border-left: none;
+  padding: 28px 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background 0.15s;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  background: #fff;
+}
+.works-cell:hover { background: #f9f9f9; }
+.works-cell:hover .works-view-btn { color: #FF3000; }
+.works-cell-wide { grid-column: 1 / -1; }
+
+.works-cell-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.works-cell-num {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  flex-shrink: 0;
+}
+.works-cell-tag { flex: 1; padding-top: 6px; }
+.works-cell-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #000;
+  transition: transform 0.15s;
+}
+.works-cell:hover .works-cell-arrow { transform: translate(2px, -2px); color: #FF3000; }
+
+.works-cell-divider {
+  height: 2px;
+  background: #000;
+}
+.works-cell-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+.works-cell-blurb { color: #444; flex: 1; }
+.works-view-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #000;
+  text-align: left;
+  padding: 0;
+  transition: color 0.15s;
+}
+
+/* Geo figures */
+.works-geo {
+  width: 100%;
+  aspect-ratio: 5/2;
+  border: 2px solid #000;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Diagonal geo */
+.works-geo-diagonal {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.wg-d-circle {
+  border-radius: 50%;
+  border: 2px solid #000;
+  margin: 12px;
+  grid-column: 2;
+  grid-row: 1;
+  aspect-ratio: 1;
+  align-self: center;
+  justify-self: center;
+  width: 60%;
+}
+.wg-d-sq {
+  border: 2px solid #000;
+  margin: 12px;
+  grid-column: 3;
+  width: 20px;
+  height: 20px;
+}
+.wg-d-dot {
+  width: 10px;
+  height: 10px;
+  background: #FF3000;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.wg-label-tl { position: absolute; top: 8px; left: 8px; background: rgba(255,255,255,0.85); padding: 1px 4px; }
+.wg-label-tr { position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.85); padding: 1px 4px; }
+.wg-label-br { position: absolute; bottom: 8px; right: 8px; background: rgba(255,255,255,0.85); padding: 1px 4px; }
+.wg-d-meta {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: right;
+}
+
+/* CTA strip */
+.works-cta-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 40px;
+  border-bottom: 4px solid #000;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.works-cta-left { display: flex; align-items: center; gap: 12px; }
+.works-cta-bar { width: 4px; height: 40px; background: #FF3000; flex-shrink: 0; }
+
+/* Responsive */
+@media (max-width: 700px) {
+  .works-grid { grid-template-columns: 1fr; }
+  .works-cell-wide { grid-column: 1; }
+  .works-cell { padding: 20px 16px 16px; }
+  .works-header { padding: 24px 16px; }
+  .works-cta-strip { padding: 20px 16px; }
+}

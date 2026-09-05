@@ -1,0 +1,17 @@
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+  border-top: 4px solid #000;
+  background: #fff;
+}
+.footer-copy {
+  color: #000;
+}
+.footer-index {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-index:hover { color: #FF3000; }

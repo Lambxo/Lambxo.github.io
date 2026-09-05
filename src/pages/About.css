@@ -1,0 +1,247 @@
+.about-page { display: flex; flex-direction: column; min-height: 100vh; }
+.about-main { flex: 1; display: flex; flex-direction: column; }
+
+/* Page header */
+.about-page-header {
+  padding: 32px 40px;
+  border-bottom: 4px solid #000;
+}
+.about-section-tag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.about-tag-line {
+  flex: 1;
+  max-width: 48px;
+  height: 2px;
+  background: #000;
+}
+.about-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 24px;
+}
+.about-title { color: #000; }
+.about-intro { max-width: 400px; padding-top: 4px; }
+
+.about-meta-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.about-meta-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 24px;
+}
+.about-meta-cell + .about-meta-cell {
+  border-left: 1px solid #ccc;
+  padding-left: 24px;
+}
+
+/* Modules */
+.about-modules {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  flex: 1;
+  border-bottom: 4px solid #000;
+}
+.about-modules-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-module {
+  padding: 28px 32px;
+  border: 2px solid #000;
+  border-top: none;
+  border-right: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.about-module-drawing {
+  border-right: 4px solid #000;
+  border-left: none;
+}
+.about-module-singing {
+  border-bottom: 4px solid #000;
+}
+.about-module-dancing {
+  border-bottom: none;
+}
+
+.about-module-header {
+  display: flex;
+  justify-content: space-between;
+}
+.about-fig-label { margin-bottom: 2px; }
+.about-module-title {
+  color: #000;
+  margin-bottom: 4px;
+}
+.about-module-desc { max-width: 340px; }
+.about-module-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid #ccc;
+  margin-top: auto;
+}
+
+/* Drawing geometry */
+.about-geo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border: 2px solid #000;
+  margin: 8px 0;
+  overflow: hidden;
+}
+.about-geo-drawing { background: #f9f9f9; }
+.geo-d-outer {
+  position: absolute;
+  inset: 16px;
+  border: 1px dashed #aaa;
+}
+.geo-d-sq-dark {
+  position: absolute;
+  width: 35%;
+  height: 35%;
+  top: 25%;
+  left: 35%;
+  background: #000;
+}
+.geo-d-circle {
+  position: absolute;
+  width: 28%;
+  height: 28%;
+  bottom: 12%;
+  left: 20%;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+.geo-d-crosshair-h {
+  position: absolute;
+  width: 60%;
+  height: 1px;
+  background: #FF3000;
+  opacity: 0.7;
+  top: 50%;
+  left: 20%;
+}
+.geo-d-crosshair-v {
+  position: absolute;
+  width: 1px;
+  height: 60%;
+  background: #FF3000;
+  opacity: 0.7;
+  left: 50%;
+  top: 20%;
+}
+.geo-d-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #FF3000;
+  border-radius: 50%;
+  top: 35%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+.geo-label {
+  position: absolute;
+  background: rgba(255,255,255,0.85);
+  padding: 2px 4px;
+}
+.geo-label-tl { top: 4px; left: 4px; }
+.geo-label-br { bottom: 4px; right: 4px; }
+
+/* Singing layout */
+.about-singing-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.about-geo-wave {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+  border: 2px solid #000;
+  padding: 12px 10px;
+  background: #fff;
+  position: relative;
+  min-width: 120px;
+}
+.wave-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #FF3000;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+.wave-bar {
+  width: 5px;
+  border-radius: 1px;
+  min-height: 4px;
+  flex-shrink: 0;
+}
+
+/* Dancing layout */
+.about-dancing-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.about-geo-motion {
+  flex-shrink: 0;
+  width: 140px;
+  height: 100px;
+  border: 2px solid #000;
+  background: #fff;
+  padding: 4px;
+}
+
+/* Manifesto bar */
+.about-manifesto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 40px;
+  background: #000;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.about-manifesto-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.about-manifesto-text h3 { color: #fff; }
+.about-manifesto-btn { flex-shrink: 0; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-modules { grid-template-columns: 1fr; }
+  .about-module-drawing { border-right: none; border-left: none; border-top: 4px solid #000; }
+  .about-title-row { flex-direction: column; gap: 16px; }
+  .about-meta-strip { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .about-meta-cell + .about-meta-cell { border-left: none; padding-left: 0; }
+}
+@media (max-width: 480px) {
+  .about-page-header { padding: 24px 16px; }
+  .about-module { padding: 20px 16px; }
+  .about-manifesto { padding: 24px 16px; }
+  .about-meta-strip { grid-template-columns: 1fr 1fr; }
+}

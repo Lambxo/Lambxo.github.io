@@ -1,0 +1,282 @@
+.boot-screen {
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  color: #fff;
+}
+
+/* Top bar */
+.boot-topbar {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.boot-topbar-left, .boot-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.boot-indicator {
+  width: 12px;
+  height: 12px;
+  background: #FF3000;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.boot-ntsc {
+  border: 2px solid #fff;
+  padding: 4px 10px;
+  font-weight: 800;
+}
+
+/* TV Set frame */
+.boot-set {
+  width: 100%;
+  max-width: 960px;
+  border: 4px solid #fff;
+  background: #f2f2f2;
+  color: #000;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  position: relative;
+}
+
+.boot-set-left {
+  border-right: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.boot-set-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 2px solid #000;
+}
+.boot-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.boot-square-sm {
+  width: 10px;
+  height: 10px;
+  background: #000;
+}
+.boot-on-air {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #000;
+  padding: 4px 8px;
+}
+.boot-on-air .caption-micro { color: #fff; }
+.boot-indicator-sm {
+  width: 8px;
+  height: 8px;
+  background: #FF3000;
+  flex-shrink: 0;
+}
+
+.boot-set-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.boot-broadcast-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.boot-mono-mini {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.boot-main-type {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.boot-headline {
+  font-size: clamp(48px, 8vw, 88px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.boot-align-tag {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+.boot-tag-red {
+  background: #FF3000;
+  color: #fff;
+  padding: 4px 8px;
+  font-weight: 800;
+}
+
+.boot-progress-area {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+}
+.boot-progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.boot-progress-track {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+  border: 1px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+.boot-progress-fill {
+  height: 100%;
+  background: #FF3000;
+  transition: width 0.1s linear;
+}
+.boot-progress-meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.boot-enter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 16px;
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.boot-enter-btn:hover { background: #FF3000; }
+
+/* Right panel — Geometry */
+.boot-set-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  gap: 20px;
+}
+
+.boot-geo {
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+.boot-geo-outer-sq {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #000;
+}
+.boot-geo-circle {
+  position: absolute;
+  inset: 16px;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+.boot-geo-inner-sq {
+  position: absolute;
+  inset: 40px;
+  border: 2px solid #000;
+}
+.boot-geo-dot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #FF3000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Corner marks */
+.boot-corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #000;
+}
+.boot-corner-tl { top: -1px; left: -1px; }
+.boot-corner-tr { top: -1px; right: -1px; }
+.boot-corner-bl { bottom: -1px; left: -1px; }
+.boot-corner-br { bottom: -1px; right: -1px; }
+
+.boot-oscill {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  border: 2px solid #000;
+}
+.boot-osc-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 4px;
+}
+.boot-osc-cell:first-child { border-right: 2px solid #000; }
+.boot-osc-val {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+/* Set footer */
+.boot-set-footer {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-top: 2px solid #000;
+  background: #fff;
+}
+
+/* Bottom bar */
+.boot-bottombar {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .boot-set { grid-template-columns: 1fr; }
+  .boot-set-left { border-right: none; border-bottom: 2px solid #000; }
+  .boot-set-right { padding: 20px; }
+  .boot-geo { width: 160px; height: 160px; }
+}
